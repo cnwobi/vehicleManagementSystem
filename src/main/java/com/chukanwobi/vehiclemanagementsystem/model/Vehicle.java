@@ -38,7 +38,13 @@ public class Vehicle {
         this.status = status;
         this.odometer = odometer;
     }
+public boolean isAvailable(){
+        if(status == Status.AVAILABLE|| status ==null){
+            return true;
+        }
 
+        return false;
+}
 
 
 
