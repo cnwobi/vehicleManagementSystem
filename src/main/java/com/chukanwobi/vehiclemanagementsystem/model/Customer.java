@@ -23,7 +23,7 @@ public class Customer {
     private Vehicle currentlyHiring;
     @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     @JsonIgnore
-    private Set<Hire> hires = new HashSet<>();
+    private Set<HireTransaction> hireTransactions = new HashSet<>();
 
     public Customer() {
     }

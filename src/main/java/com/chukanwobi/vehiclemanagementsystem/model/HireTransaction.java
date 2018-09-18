@@ -13,7 +13,7 @@ import java.util.Calendar;
 @Getter
 @Setter
 @Entity
-public class Hire {
+public class HireTransaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,18 +23,19 @@ public class Hire {
     @ManyToOne(cascade = CascadeType.ALL)
     @JsonIgnore
     private Vehicle vehicle;
-    @OneToOne
-    private DailyRate dailyRate;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Rate rate;
     private Calendar dateHired;
     private Calendar returnedDate;
 
     private Integer initialOdometerReading;
+    private Integer finalOdometerReading;
 
-    public Hire(Customer customer, Vehicle vehicle) {
+    public HireTransaction(Customer customer, Vehicle vehicle) {
         this.customer = customer;
         this.vehicle = vehicle;
-        this.vehicle.getHires().add(this);
-        this. customer.getHires().add(this);
+        this.vehicle.getHireTransactions().add(this);
+        this. customer.getHireTransactions().add(this);
         this.vehicle.setStatus(Status.HIRE);
         this.vehicle.setCurrentlyHiredBy(customer);
         this.customer.setCurrentlyHiring(this.vehicle);
@@ -42,7 +43,7 @@ public class Hire {
         dateHired = Calendar.getInstance();
     }
 
-    public Hire() {
+    public HireTransaction() {
     }
 
     public BigDecimal hireCharge(){
@@ -50,13 +51,13 @@ public class Hire {
 
             long days = ChronoUnit.DAYS.between(dateHired.toInstant(), returnedDate.toInstant());
 
-            return new BigDecimal(days * dailyRate.getCostPerDayInDollars());
+            return new BigDecimal(days * rate.getCostPerDayInDollars());
         }
 
         throw new RuntimeException("This hire is not complete yet");
     }
 
-    public Hire hireComplete(){
+    public HireTransaction hireComplete(){
         this.customer.setCurrentlyHiring(null);
         this.vehicle.setCurrentlyHiredBy(null);
         this.vehicle.setStatus(Status.AVAILABLE);

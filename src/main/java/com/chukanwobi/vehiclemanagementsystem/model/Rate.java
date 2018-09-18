@@ -13,16 +13,18 @@ import javax.persistence.Id;
 @Setter
 @ToString
 @Entity
-public class DailyRate {
+public class Rate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
     private Double costPerDayInDollars;
 
-    public DailyRate(String description, Double costPerDayInDollars) {
+    public Rate(String description, Double costPerDayInDollars) {
         this.description = description;
         this.costPerDayInDollars = costPerDayInDollars;
     }
 
+    public Rate() {
+    }
 }

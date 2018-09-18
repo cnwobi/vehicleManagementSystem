@@ -27,7 +27,7 @@ public class Vehicle {
 
     @OneToMany(mappedBy = "vehicle", cascade = CascadeType.ALL)
     @JsonIgnore
-    private Set<Hire> hires = new HashSet<>();
+    private Set<HireTransaction> hireTransactions = new HashSet<>();
 
     public Vehicle() {
     }
