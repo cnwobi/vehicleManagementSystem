@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common-header-forms">
+    <meta name="viewport" content="
+      width=device-width,
+      initial-scale=1,
+      minimum-scale=1,
+      maximum-scale=1
+    "/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<section>
+    <div class="container-login">
+<div class="content">
+        <div class="input">
+    <h1>Log In</h1>
+            <form name="f" th:action="@{/login}" method="post">
+<div class="alert center-text" th:if="${param.error}" > Invalid Username or Password!</div>
+                <div th:if="${param.logout}" class="center-text alert-success">
+                    You have been logged out.
+                </div>
+                <input type="text" placeholder="Username" id="username" name="username">
+
+                <input type="password" placeholder="Password" id="password" name="password">
+                <button class="btn">Login</button>
+            </form>
+            <div class="a-wrapper">
+<a href="#">forgot password?</a>
+            </div>
+        </div>
+</div>
+
+    </div>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="
+      width=device-width,
+      initial-scale=1,
+      minimum-scale=1,
+      maximum-scale=1
+    "/>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<nav>
+<ul class="ul-nav1">
+    <li class="brand"> Zoom </li>
+
+    <li class="menu"><a href="#menu"><i class="fas fa-bars"></i></a></li>
+</ul>
+<div class="ul-div">
+    <ul class="ul-nav2">
+        <li th:text="${'Welcome '+ customer.getFirstName()}"></li>
+        <li>
+            <a>Reservations</a>
+        </li>
+
+        <li><a>Deals</a></li>
+        <li><a>Locations</a></li>
+        <li><a>Car & Services</a></li>
+
+        <li><a>Logout</a></li>
+
+    </ul>
+</div>
+</nav>
+</nav>
+<!--<div>
+
+</div>-->
+</body>
+<script src="/webjars/jquery/3.3.1-1/jquery.js"></script>
+<script src="/js/style.js"></script>
+</html>
