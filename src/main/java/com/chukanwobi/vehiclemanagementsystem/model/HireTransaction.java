@@ -1,7 +1,5 @@
 package com.chukanwobi.vehiclemanagementsystem.model;
 
-import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Status;
-import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
@@ -38,7 +36,7 @@ public class HireTransaction {
         this.vehicle = vehicle;
         this.vehicle.getHireTransactions().add(this);
         this.customer.getHireTransactions().add(this);
-        this.vehicle.setStatus(Status.HIRE);
+        this.vehicle.setStatus(Vehicle.Status.HIRE);
         this.vehicle.setCurrentlyHiredBy(customer);
         this.customer.setCurrentlyHiring(this.vehicle);
         this.initialOdometerReading = vehicle.getOdometer();
@@ -64,7 +62,7 @@ public class HireTransaction {
     public HireTransaction hireComplete() {
         this.customer.setCurrentlyHiring(null);
         this.vehicle.setCurrentlyHiredBy(null);
-        this.vehicle.setStatus(Status.AVAILABLE);
+        this.vehicle.setStatus(Vehicle.Status.AVAILABLE);
         this.returnedDate = Calendar.getInstance();
         return this;
     }

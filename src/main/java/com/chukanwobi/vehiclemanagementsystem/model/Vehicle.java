@@ -1,7 +1,5 @@
-package com.chukanwobi.vehiclemanagementsystem.model.vehicle;
+package com.chukanwobi.vehiclemanagementsystem.model;
 
-import com.chukanwobi.vehiclemanagementsystem.model.Customer;
-import com.chukanwobi.vehiclemanagementsystem.model.HireTransaction;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -57,7 +55,9 @@ public boolean isAvailable(){
 
 
 
-
+    public enum FuelType {DIESEL,PETROL,GAS}
+    public enum Transmission {AUTOMATIC,MANUAL}
+    public enum Status {HIRE,AVAILABLE,SERVICE}
 
 
 

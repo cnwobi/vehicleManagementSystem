@@ -1,6 +1,6 @@
 package com.chukanwobi.vehiclemanagementsystem.repository;
 
-import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
+import com.chukanwobi.vehiclemanagementsystem.model.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

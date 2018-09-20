@@ -3,7 +3,7 @@ package com.chukanwobi.vehiclemanagementsystem.converter;
 import com.chukanwobi.vehiclemanagementsystem.command.HireTransactionCommand;
 import com.chukanwobi.vehiclemanagementsystem.model.Customer;
 import com.chukanwobi.vehiclemanagementsystem.model.HireTransaction;
-import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
+import com.chukanwobi.vehiclemanagementsystem.model.Vehicle;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;

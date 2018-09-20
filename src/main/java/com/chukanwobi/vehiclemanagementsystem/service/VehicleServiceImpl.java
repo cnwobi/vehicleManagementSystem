@@ -2,8 +2,8 @@ package com.chukanwobi.vehiclemanagementsystem.service;
 
 import com.chukanwobi.vehiclemanagementsystem.exception.RecordNotFoundException;
 import com.chukanwobi.vehiclemanagementsystem.exception.VehicleException;
-import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Status;
-import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
+
+import com.chukanwobi.vehiclemanagementsystem.model.Vehicle;
 import com.chukanwobi.vehiclemanagementsystem.repository.VehicleRepository;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +26,7 @@ public class VehicleServiceImpl implements VehicleService {
     public boolean sendToServicing(Long vehicleId) throws RecordNotFoundException,VehicleException {
         Vehicle vehicle = findById(vehicleId);
         if (vehicle.isAvailable()) {
-            vehicle.setStatus(Status.SERVICE);
+            vehicle.setStatus(Vehicle.Status.SERVICE);
             return true;        }
         throw new VehicleException("Vehicle not available for service");
     }

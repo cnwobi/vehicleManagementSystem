@@ -4,8 +4,7 @@ import com.chukanwobi.vehiclemanagementsystem.exception.CustomerException;
 import com.chukanwobi.vehiclemanagementsystem.exception.VehicleException;
 import com.chukanwobi.vehiclemanagementsystem.model.Customer;
 import com.chukanwobi.vehiclemanagementsystem.model.HireTransaction;
-import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Status;
-import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
+import com.chukanwobi.vehiclemanagementsystem.model.Vehicle;
 import com.chukanwobi.vehiclemanagementsystem.repository.CustomerRepository;
 import com.chukanwobi.vehiclemanagementsystem.repository.HireTransactionRepository;
 import com.chukanwobi.vehiclemanagementsystem.repository.VehicleRepository;
@@ -73,7 +72,7 @@ public class HireTransactionServiceImplTest {
     }
 @Test
     public void testVehicleStatusHireForNewHire() throws VehicleException{
-        vehicle.setStatus(Status.HIRE);
+        vehicle.setStatus(Vehicle.Status.HIRE);
         customer.setCurrentlyHiring(null);
         when(vehicleRepository.findById(any())).thenReturn(Optional.of(vehicle));
         when(customerRepository.findById(any())).thenReturn(Optional.of(customer));
@@ -86,7 +85,7 @@ public class HireTransactionServiceImplTest {
     @Test
     public void testVehicleStatusServiceForNewHire() throws VehicleException {
 
-        vehicle.setStatus(Status.SERVICE);
+        vehicle.setStatus(Vehicle.Status.SERVICE);
         customer.setCurrentlyHiring(null);
         when(vehicleRepository.findById(any())).thenReturn(Optional.of(vehicle));
         when(customerRepository.findById(any())).thenReturn(Optional.of(customer));
@@ -98,7 +97,7 @@ public class HireTransactionServiceImplTest {
 
     @Test
     public void successfulServiceForNewHire(){
-        vehicle.setStatus(Status.AVAILABLE);
+        vehicle.setStatus(Vehicle.Status.AVAILABLE);
         customer.setCurrentlyHiring(null);
         when(vehicleRepository.findById(any())).thenReturn(Optional.of(vehicle));
         when(customerRepository.findById(any())).thenReturn(Optional.of(customer));

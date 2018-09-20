@@ -5,7 +5,7 @@ import com.chukanwobi.vehiclemanagementsystem.exception.RecordNotFoundException;
 import com.chukanwobi.vehiclemanagementsystem.exception.VehicleException;
 import com.chukanwobi.vehiclemanagementsystem.model.Customer;
 import com.chukanwobi.vehiclemanagementsystem.model.HireTransaction;
-import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
+import com.chukanwobi.vehiclemanagementsystem.model.Vehicle;
 import com.chukanwobi.vehiclemanagementsystem.repository.CustomerRepository;
 import com.chukanwobi.vehiclemanagementsystem.repository.HireTransactionRepository;
 import com.chukanwobi.vehiclemanagementsystem.repository.VehicleRepository;
