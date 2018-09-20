@@ -1,5 +1,6 @@
 package com.chukanwobi.vehiclemanagementsystem.model;
 
+import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;

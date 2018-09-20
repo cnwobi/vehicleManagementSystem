@@ -1,5 +1,7 @@
 package com.chukanwobi.vehiclemanagementsystem.model;
 
+import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Status;
+import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,8 +24,7 @@ public class HireTransaction {
     @ManyToOne(cascade = CascadeType.ALL)
     @JsonIgnore
     private Vehicle vehicle;
-    @OneToOne(cascade = CascadeType.ALL)
-    private Rate rate;
+
     private Calendar dateHired;
     private Calendar returnedDate;
 
@@ -44,10 +45,6 @@ public class HireTransaction {
         dateHired = Calendar.getInstance();
     }
 
-    public HireTransaction(Customer customer, Vehicle vehicle, Rate rate) {
-        this(customer, vehicle);
-        this.rate = rate;
-    }
 
     public HireTransaction() {
     }
@@ -58,7 +55,7 @@ public class HireTransaction {
     public BigDecimal hireCharge() {
         if (returnedDate != null) {
             long days = ChronoUnit.DAYS.between(dateHired.toInstant(), returnedDate.toInstant());
-            charge = new BigDecimal(days * rate.getCostPerDayInDollars());
+            charge = new BigDecimal(days * vehicle.getDailyBaseRate());
             return charge;
         }
         throw new RuntimeException("This hire is not complete yet");

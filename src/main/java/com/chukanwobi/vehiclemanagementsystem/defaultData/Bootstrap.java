@@ -1,6 +1,10 @@
 package com.chukanwobi.vehiclemanagementsystem.defaultData;
 
 import com.chukanwobi.vehiclemanagementsystem.model.*;
+import com.chukanwobi.vehiclemanagementsystem.model.vehicle.FuelType;
+import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Status;
+import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Transmission;
+import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
 import com.chukanwobi.vehiclemanagementsystem.repository.CustomerRepository;
 import com.chukanwobi.vehiclemanagementsystem.repository.HireTransactionRepository;
 import com.chukanwobi.vehiclemanagementsystem.repository.StaffRepository;
@@ -48,14 +52,17 @@ private CustomerRepository customerRepository;
 
 
         Vehicle vehicle = new Vehicle("21232Ag","Bentley 2014",null,0);
+        vehicle.setFuelType(FuelType.PETROL);
+        vehicle.setTransmission(Transmission.AUTOMATIC);
         HireTransaction hireTransaction = new HireTransaction(customer,vehicle);
-        Rate rate = new Rate("Standard Daily Rate", 12.5);
-        hireTransaction.setRate(rate);
+
         hireTransactionRepository.save(hireTransaction);
 
 
 
         Vehicle vehicle1 = new Vehicle("RIR836","Ford Falcon", Status.AVAILABLE,200145);
+        vehicle1.setTransmission(Transmission.MANUAL);
+        vehicle1.setFuelType(FuelType.GAS);
         vehicleRepository.save(vehicle1);
     }
 }

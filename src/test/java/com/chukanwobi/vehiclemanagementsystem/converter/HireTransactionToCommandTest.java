@@ -3,13 +3,12 @@ package com.chukanwobi.vehiclemanagementsystem.converter;
 import com.chukanwobi.vehiclemanagementsystem.command.HireTransactionCommand;
 import com.chukanwobi.vehiclemanagementsystem.model.Customer;
 import com.chukanwobi.vehiclemanagementsystem.model.HireTransaction;
-import com.chukanwobi.vehiclemanagementsystem.model.Rate;
-import com.chukanwobi.vehiclemanagementsystem.model.Vehicle;
+import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class HireTransactionToCommandTest {
 private HireTransactionToCommand hireTransactionConverter;
@@ -30,15 +29,14 @@ hireTransactionConverter = new HireTransactionToCommand();
         vehicle.setId(VEHICLE_ID);
         Customer customer = new Customer();
         customer.setId(CUSTOMER_ID);
-        Rate rate = new Rate();
-        rate.setId(RATE_ID);
 
-        HireTransaction hireTransaction = new HireTransaction(customer,vehicle,rate);
+
+        HireTransaction hireTransaction = new HireTransaction(customer,vehicle);
 
         HireTransactionCommand command = hireTransactionConverter.convert(hireTransaction);
 
         assertEquals(VEHICLE_ID,command.getVehicleId());
-        assertEquals(RATE_ID,command.getRateId());
+
         assertEquals(CUSTOMER_ID,command.getCustomerId());
 
     }

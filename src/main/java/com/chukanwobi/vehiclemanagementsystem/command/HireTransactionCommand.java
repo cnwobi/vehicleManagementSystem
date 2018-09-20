@@ -1,6 +1,5 @@
 package com.chukanwobi.vehiclemanagementsystem.command;
 
-import com.chukanwobi.vehiclemanagementsystem.model.Rate;
 import lombok.Data;
 @Data
 public class HireTransactionCommand {
@@ -11,7 +10,6 @@ public class HireTransactionCommand {
 
     private Long vehicleId;
 
-    private Long rateId;
 
 
     private int initialOdometerReading;

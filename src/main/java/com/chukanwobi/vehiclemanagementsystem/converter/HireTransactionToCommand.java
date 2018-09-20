@@ -15,7 +15,7 @@ public class HireTransactionToCommand implements Converter<HireTransaction,HireT
         HireTransactionCommand command = new HireTransactionCommand();
 command.setCustomerId(hireTransaction.getCustomer().getId());
 command.setVehicleId(hireTransaction.getVehicle().getId());
-command.setRateId(hireTransaction.getRate().getId());
+
 
         return command;
     }

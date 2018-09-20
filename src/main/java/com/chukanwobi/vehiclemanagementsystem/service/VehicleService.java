@@ -1,7 +1,7 @@
 package com.chukanwobi.vehiclemanagementsystem.service;
 
 import com.chukanwobi.vehiclemanagementsystem.exception.RecordNotFoundException;
-import com.chukanwobi.vehiclemanagementsystem.model.Vehicle;
+import com.chukanwobi.vehiclemanagementsystem.model.vehicle.Vehicle;
 
 public interface VehicleService {
     Vehicle findById(Long vehicleId) throws RecordNotFoundException;
