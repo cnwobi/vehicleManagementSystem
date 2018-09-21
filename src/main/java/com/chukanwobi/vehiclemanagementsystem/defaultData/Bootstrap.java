@@ -50,18 +50,45 @@ private CustomerRepository customerRepository;
        staffRepository.save(staff);
 
 
-        Vehicle vehicle = new Vehicle("21232Ag","Bentley 2014",null,0);
+        Vehicle vehicle = new Vehicle();
+        vehicle.setRegNumber("21232Ag");
+        vehicle.setDescription("An iconic British made car...MAke England great again");
         vehicle.setFuelType(Vehicle.FuelType.PETROL);
+        vehicle.setBrand(Vehicle.Brand.BENTLEY);
+        vehicle.setModel("Mulsanne");
         vehicle.setTransmission(Vehicle.Transmission.AUTOMATIC);
+        vehicle.setDailyBaseRate(100.00);
+
+        vehicle.setImageUrl("https://s3.amazonaws.com/carhireapp/bentley.jpg");
         HireTransaction hireTransaction = new HireTransaction(customer,vehicle);
 
         hireTransactionRepository.save(hireTransaction);
 
 
 
-        Vehicle vehicle1 = new Vehicle("RIR836","Ford Falcon",Vehicle. Status.AVAILABLE,200145);
+        Vehicle vehicle1 = new Vehicle();
+        vehicle1.setRegNumber("RIR836");
+        vehicle1.setDescription("Ford Falcon is an iconic car");
+        vehicle1.setStatus(Vehicle.Status.AVAILABLE);
+        vehicle1.setModel("Ranger");
+        vehicle1.setOdometer(200145);
         vehicle1.setTransmission(Vehicle.Transmission.MANUAL);
+        vehicle1.setBrand(Vehicle.Brand.FORD);
         vehicle1.setFuelType(Vehicle.FuelType.GAS);
+        vehicle1.setDailyBaseRate(500.50);
         vehicleRepository.save(vehicle1);
+
+        Vehicle vehicle2 = new Vehicle();
+        vehicle2.setRegNumber("SRT321");
+        vehicle2.setDescription("A premium vehicle");
+        vehicle2.setBrand(Vehicle.Brand.HONDA);
+        vehicle2.setModel("Accord");
+        vehicle2.setOdometer(0);
+        vehicle2.setTransmission(Vehicle.Transmission.MANUAL);
+        vehicle2.setFuelType(Vehicle.FuelType.PETROL);
+        vehicle2.setDailyBaseRate(200.34);
+
+        vehicle2.setImageUrl("https://s3.amazonaws.com/carhireapp/honda.jpg");
+        vehicleRepository.save(vehicle2);
     }
 }

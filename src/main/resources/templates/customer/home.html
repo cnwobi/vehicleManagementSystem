@@ -9,41 +9,71 @@
       minimum-scale=1,
       maximum-scale=1
     "/>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Noto+Serif+JP|Work+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <meta charset="UTF-8">
+
     <title>Home</title>
 </head>
 <body>
 <nav>
-<ul class="ul-nav1">
-    <li class="brand"> Zoom </li>
+    <ul class="ul-nav1">
+        <li class="brand"> Zoom</li>
 
-    <li class="menu"><a href="#menu"><i class="fas fa-bars"></i></a></li>
-</ul>
-<div class="ul-div">
-    <ul class="ul-nav2">
-        <li th:text="${'Welcome '+ customer.getFirstName()}"></li>
-        <li>
-            <a>Reservations</a>
-        </li>
-
-        <li><a>Deals</a></li>
-        <li><a>Locations</a></li>
-        <li><a>Car & Services</a></li>
-
-        <li><a>Logout</a></li>
-
+        <li class="menu"><a href="#menu"><i class="fas fa-bars"></i></a></li>
     </ul>
-</div>
+    <div class="ul-div">
+        <ul class="ul-nav2">
+            <li th:text="${'Welcome '+ customer.getFirstName()}"></li>
+            <li>
+                <a>Reservations</a>
+            </li>
+
+            <li><a>Deals</a></li>
+            <li><a>Locations</a></li>
+            <li><a>Car & Services</a></li>
+
+            <li><a>Logout</a></li>
+
+        </ul>
+    </div>
 </nav>
 </nav>
 <!--<div>
 
 </div>-->
 </body>
+<!--Start of aside-->
+<aside>
+
+</aside>
+<!--End of aside-->
+<!--Start of article-->
+<article>
+    <header>
+        <h4>Please choose a car to Hire</h4>
+    </header>
+    <section th:each="vehicle:${vehicles}">
+
+         <img th:unless="${vehicle.imageUrl!=null}"   src="/images/ford.jpeg" width="100%">
+        <img th:unless="${vehicle.imageUrl==null}" th:src="${vehicle.imageUrl}">
+
+      <div class="header-font car-model-brand" th:text="${#strings.capitalize(vehicle.brand.toString().toLowerCase())+' '+ vehicle.model}">Toyota Corolla</div>
+      <div>Reg No: <span th:text="${vehicle.regNumber}"> RIR 836</span></div>
+        <div >  <span th:text="${#strings.capitalize(vehicle.transmission.toString().toLowerCase())}"> </span>   Transmission</div>
+
+        <div class="price"> <span > <sup>A$</sup> <span th:text="${vehicle.dailyBaseRate}">100.50</span></span> Daily</div>
+
+        <button>Select</button>
+
+    </section>
+</article>
+<!--End of article-->
+<footer></footer>
 <script src="/webjars/jquery/3.3.1-1/jquery.js"></script>
 <script src="/js/style.js"></script>
 </html>

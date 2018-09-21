@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Economica|Special+");
+
+
 $colors: (
         primary: #DFDFDF,
         primary_light: white,
@@ -5,7 +8,8 @@ $colors: (
         accent:#D4002A,
 
 );
-
+$economica: 'Economica', sans-serif;
+$elite:'Special Elite', cursive;
 @function color($color-name) {
   @return map_get($colors, $color-name)
 }
@@ -17,19 +21,24 @@ $colors: (
 }
 
 body,html{
+
   margin:0;
   padding: 0;
-  overflow: hidden;}
-
+  overflow-y: scroll; overflow-x:hidden;
+  font-family: 'Lato', sans-serif;}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Noto Serif JP', sans-serif;
+}
 body{
 
   nav{
     display: block;
-
+   position: fixed;
+    top: 0px;
     margin: 0;
     width: 100vw;
     height: 64px;
-  position: absolute;
+
     background: linear-gradient(180deg, #f7f7f7 , #d7d7d7 );
 a{
   color:color(accent) ;

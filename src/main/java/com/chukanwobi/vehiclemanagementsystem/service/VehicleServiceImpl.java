@@ -7,6 +7,8 @@ import com.chukanwobi.vehiclemanagementsystem.model.Vehicle;
 import com.chukanwobi.vehiclemanagementsystem.repository.VehicleRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class VehicleServiceImpl implements VehicleService {
     private VehicleRepository vehicleRepository;
@@ -36,5 +38,9 @@ public class VehicleServiceImpl implements VehicleService {
         return false;
     }
 
+    @Override
+    public List<Vehicle> findAll() {
 
+        return vehicleRepository.findAll();
+    }
 }

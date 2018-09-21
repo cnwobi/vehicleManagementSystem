@@ -1,0 +1,108 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: Raleway; }
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: url("/images/cool-background.jpg") no-repeat center center fixed;
+  overflow: hidden;
+  background-size: cover;
+  font-family: "Roboto Slab"; }
+
+input, textarea, select, button {
+  font-family: inherit; }
+
+.btn {
+  display: block;
+  height: 4vh;
+  width: 120px;
+  height: 30px;
+  margin: auto;
+  padding: auto;
+  border: none;
+  background: #0747A6;
+  color: white;
+  border-radius: 23px;
+  outline: none; }
+
+.center-text {
+  text-align: center; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.alert {
+  color: red;
+  font-size: 4vw; }
+
+.alert-success {
+  color: green; }
+
+button:hover {
+  background-color: #4e93f8; }
+
+.container-login {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  /*Div content media queries*/ }
+  .container-login div.content {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 20vh;
+    height: 45vh;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.3); }
+    .container-login div.content div.input {
+      padding-top: 3vh; }
+      .container-login div.content div.input h1 {
+        text-align: center;
+        color: #0747A6; }
+      .container-login div.content div.input input {
+        opacity: 1;
+        margin: auto;
+        margin-bottom: 10px;
+        display: block;
+        border: none;
+        height: 30px;
+        border-radius: 12px;
+        text-align: center; }
+      .container-login div.content div.input input:focus {
+        border-radius: 12px; }
+      .container-login div.content div.input input::placeholder {
+        padding: 12px;
+        color: #0747A6; }
+      .container-login div.content div.input button {
+        margin-top: 5vh; }
+      .container-login div.content div.input button:hover {
+        color: #BC6979; }
+  @media (min-width: 431px) {
+    .container-login div.content {
+      width: 50vw;
+      margin: auto;
+      margin-top: 20vh; } }
+  @media (min-width: 769px) {
+    .container-login div.content {
+      width: 450px; } }
+  .container-login div.input div.alert, .container-login div.input div.alert-success {
+    margin-bottom: 1vh; }
+    @media (min-width: 431px) {
+      .container-login div.input div.alert, .container-login div.input div.alert-success {
+        font-size: 14px; } }
+  .container-login div.a-wrapper {
+    margin-top: 2vh;
+    text-align: center; }
+    .container-login div.a-wrapper a {
+      text-decoration: none;
+      color: #0747A6; }
+    .container-login div.a-wrapper a:hover {
+      color: #dd1c1a; }
+
+/*# sourceMappingURL=login.css.map */

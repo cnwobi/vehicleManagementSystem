@@ -1,0 +1,69 @@
+@import "style";
+button{
+  border: none;
+  width: 146px;
+  height: 38px;
+  color: white;
+  background-color: color(accent);
+  outline: none;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+button:active{
+transform: translateY(4px);
+}
+button:hover{
+  background-color: darken(color(accent),10);
+}
+article{
+  margin-top: 64px;
+  margin-right: 12px;
+  margin-left: 12px;
+  padding-top: 5px;
+  box-sizing: border-box;
+  header{
+
+    text-align: center;
+  }
+  section{
+    display: block;
+    border-bottom :1px color(primary) solid;
+    padding-bottom: 20px;
+    img{
+      display: block;
+      margin: auto;
+      height: 150px;
+      width: 250px;
+    }
+    div{
+      width: 100vw;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    button{
+      display: block;
+      margin: auto;
+    }
+
+  }
+}
+
+.header-font{
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
+.car-model-brand{
+  font-weight: bolder;
+  font-size: 34px;
+}
+
+
+div.price{
+  font-weight: bolder;
+  margin-top: 15px;
+span{
+  font-family: $economica;
+  font-weight: bolder;
+  font-size: 20px;
+}
+}

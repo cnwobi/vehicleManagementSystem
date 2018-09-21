@@ -1,0 +1,83 @@
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif JP', sans-serif; }
+
+body nav {
+  display: block;
+  margin: 0;
+  width: 100vw;
+  height: 64px;
+  position: absolute;
+  background: linear-gradient(180deg, #f7f7f7, #d7d7d7); }
+  body nav a {
+    color: #D4002A;
+    text-decoration: none; }
+  body nav ul.ul-nav1 {
+    list-style: none;
+    width: 100vw;
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    position: absolute; }
+    body nav ul.ul-nav1 li.brand {
+      font-family: 'Work Sans', sans-serif;
+      padding-left: 10px;
+      color: #D4002A;
+      font-weight: 900;
+      font-size: 29px; }
+    body nav ul.ul-nav1 li.menu {
+      padding-right: 20px; }
+  body nav ul.ul-nav2 {
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30vw;
+    margin-top: 64px;
+    width: 70vw;
+    border: none;
+    height: 80vh;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #f9f9f9; }
+    body nav ul.ul-nav2 li {
+      margin-top: 10%; }
+      body nav ul.ul-nav2 li a {
+        color: black; }
+
+.ul-div {
+  display: none; }
+
+article {
+  margin-top: 64px;
+  margin-right: 12px;
+  margin-left: 12px;
+  padding-top: 5px;
+  box-sizing: border-box; }
+  article header {
+    text-align: center; }
+  article section {
+    border-bottom: 1px #DFDFDF solid; }
+    article section div {
+      width: 100vw;
+      text-align: center; }
+
+.header-font {
+  font-family: 'Noto Serif JP', sans-serif; }
+
+.car-model-brand {
+  font-weight: bolder;
+  font-size: 34px; }
+
+/*# sourceMappingURL=style.css.map */

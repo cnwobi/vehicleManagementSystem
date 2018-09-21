@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.Year;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,31 +20,28 @@ public class Vehicle {
     private Long id;
     private String regNumber;
     private String description;
+    private String imageUrl;
     @Enumerated(value = EnumType.STRING)
     private Status status;
-    private Integer odometer;
+    private Integer odometer=0;
     private Double dailyBaseRate;
     @Enumerated(value = EnumType.STRING)
     private FuelType fuelType;
     @Enumerated(value = EnumType.STRING)
+    private Brand brand;
+    @Enumerated(value = EnumType.STRING)
     private Transmission transmission;
-
+    private String model;
+    private Year modelYear;
     @OneToOne
     private Customer currentlyHiredBy;
-
-
     @OneToMany(mappedBy = "vehicle", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<HireTransaction> hireTransactions = new HashSet<>();
 
 
 
-    public Vehicle(String regNumber, String description, Status status, Integer odometer) {
-        this.regNumber = regNumber;
-        this.description = description;
-        this.status = status;
-        this.odometer = odometer;
-    }
+
 public boolean isAvailable(){
         if(status == Status.AVAILABLE|| status ==null){
             return true;
@@ -54,11 +52,12 @@ public boolean isAvailable(){
 
 
 
-
+/**
+ * Enums used by the vehicle class*/
     public enum FuelType {DIESEL,PETROL,GAS}
     public enum Transmission {AUTOMATIC,MANUAL}
     public enum Status {HIRE,AVAILABLE,SERVICE}
-
+    public  enum Brand{BENTLEY,MERCEDES,JAGUAR,PEUGOT,HONDA,TOYOTA,FORD}
 
 
 }
