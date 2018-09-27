@@ -1,0 +1,35 @@
+@import "home";
+
+div.main-error{
+  width: 80vw;
+
+  margin: auto;
+  margin-top: 25vh;
+  border :2px color(primary) solid;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: large;
+
+  span{
+    display: block;
+    margin-bottom: 30px;
+    font-size: 12px;
+    font-style: italic;
+
+  }
+  span.title{
+    font-style: normal;
+    font-family: "Noto Serif JP";
+    font-size: 25px;
+    margin: 10px 10px;
+  }
+  i{
+    color: color(accent);
+    display: block;
+    width: 30%;
+    font-size: 34px;
+    margin: auto;
+  }
+}

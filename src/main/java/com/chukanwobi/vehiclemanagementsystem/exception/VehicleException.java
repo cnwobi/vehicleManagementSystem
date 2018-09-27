@@ -1,5 +1,9 @@
 package com.chukanwobi.vehiclemanagementsystem.exception;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+
 public class VehicleException extends RuntimeException {
     public VehicleException() {
         super();

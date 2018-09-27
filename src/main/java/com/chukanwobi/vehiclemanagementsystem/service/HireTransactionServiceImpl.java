@@ -43,9 +43,9 @@ public class HireTransactionServiceImpl implements HireTransactionService {
             hireTransactionRepository.save(hireTransaction);
             return hireTransaction;
         } else if (customer.getCurrentlyHiring() != null) {
-            throw new CustomerException("Cannot hire a new car as customer with id " + customer.getId() + " has not returned Vehicle with id " + customer.getCurrentlyHiring().getId());
+            throw new CustomerException(" Please return previously hired car and try again");
         } else if (!vehicle.isAvailable()) {
-            throw new VehicleException("Cannot complete hire current vehicle status is " + vehicle.getStatus().toString());
+            throw new VehicleException("Vehicle is unavailable! ");
         }
         return null;
     }

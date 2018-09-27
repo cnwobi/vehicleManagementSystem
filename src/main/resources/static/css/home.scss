@@ -1,5 +1,7 @@
 @import "style";
-button{
+
+
+button,.button{
   border: none;
   width: 146px;
   height: 38px;
@@ -8,10 +10,10 @@ button{
   outline: none;
   font-family: 'Noto Serif JP', sans-serif;
 }
-button:active{
-transform: translateY(4px);
+button:active,.button:active{
+  transform: translateY(4px);
 }
-button:hover{
+button:hover,.button:hover{
   background-color: darken(color(accent),10);
 }
 article{
@@ -20,16 +22,20 @@ article{
   margin-left: 12px;
   padding-top: 5px;
   box-sizing: border-box;
+
   header{
 
     text-align: center;
   }
   section{
     display: flex;
-flex-direction: column;
-
+    flex-direction: column;
     border-bottom :2px color(primary) solid;
     padding-bottom: 20px;
+    @include laptop{
+      flex-direction: row;
+    }
+
     img{
       display: block;
       margin: auto;
@@ -45,9 +51,12 @@ flex-direction: column;
       margin-bottom: 10px;
     }
 
-    button{
+    .button{
+      box-sizing: border-box;
+      text-decoration: none;
       display: block;
       margin: auto;
+      padding-top:8px ;
     }
 
   }
@@ -65,10 +74,19 @@ flex-direction: column;
 
 div.price{
   font-weight: bolder;
-  margin-top: 15px;
-span{
-  font-family: $economica;
-  font-weight: bolder;
-  font-size: 20px;
+  margin-top: 16px;
+  span{
+    font-family: $economica;
+    font-weight: bolder;
+    font-size: 20px;
+  }
 }
+.success{
+  color: green;
 }
+div.success{
+  width: 100%;
+  text-align: center;
+
+}
+

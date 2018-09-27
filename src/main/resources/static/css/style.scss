@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Economica|Special+");
 
+$tablet: 431px;
+$laptop: 769px;
+$mobile:414px;
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content
+  }
+}
+@mixin mobile{
+  @media (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content
+  }
+}
 
 $colors: (
         primary: #DFDFDF,
@@ -33,17 +52,17 @@ body{
 
   nav{
     display: block;
-   position: fixed;
+    position: fixed;
     top: 0px;
     margin: 0;
     width: 100vw;
     height: 64px;
 
     background: linear-gradient(180deg, #f7f7f7 , #d7d7d7 );
-a{
-  color:color(accent) ;
-  text-decoration: none;
-}
+    a{
+      color:color(accent) ;
+      text-decoration: none;
+    }
 
     ul.ul-nav1{
       list-style: none;
@@ -57,12 +76,12 @@ a{
         font-family: 'Work Sans', sans-serif;
         padding-left: 10px;
         color: color(accent);
-font-weight:900;
+        font-weight:900;
         font-size: 29px;
       }
 
       li.menu{
-      padding-right: 20px;
+        padding-right: 20px;
       }
 
 

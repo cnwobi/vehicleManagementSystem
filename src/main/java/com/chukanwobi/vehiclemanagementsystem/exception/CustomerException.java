@@ -1,5 +1,8 @@
 package com.chukanwobi.vehiclemanagementsystem.exception;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
 public class CustomerException extends RuntimeException {
     public CustomerException() {
         super();

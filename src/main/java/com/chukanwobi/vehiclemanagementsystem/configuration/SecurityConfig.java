@@ -47,7 +47,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/default")
+                .defaultSuccessUrl("/index")
                 .and()
                 .exceptionHandling().accessDeniedPage("/denied")
                 .and()

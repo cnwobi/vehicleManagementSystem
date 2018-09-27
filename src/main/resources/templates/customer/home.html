@@ -57,8 +57,10 @@
     <header>
         <h4>Please choose a car to Hire</h4>
     </header>
+    <div class="success" th:if="${success}" > Transaction successful!</div>
     <section th:each="vehicle:${vehicles}">
-        <div>
+
+        <div >
             <img th:unless="${vehicle.imageUrl!=null}" src="/images/ford.jpeg" width="100%">
             <img th:unless="${vehicle.imageUrl==null}" th:src="${vehicle.imageUrl}">
         </div>
@@ -72,12 +74,13 @@
                 Transmission
             </div>
         </div>
-        <div>
+        <div class="last-div">
             <div class="price"><span> <sup>A$</sup> <span th:text="${vehicle.dailyBaseRate}">100.50</span></span> Daily
             </div>
 
-            <button>Select</button>
+            <a class="button" th:href="@{'/customer/hire/vehicle/'+${vehicle.id}}">Select</a>
         </div>
+
     </section>
 </article>
 <!--End of article-->
