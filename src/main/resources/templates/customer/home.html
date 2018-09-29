@@ -11,8 +11,9 @@
     "/>
     <link href="https://fonts.googleapis.com/css?family=Lato|Noto+Serif+JP|Work+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/home.css">
+
+  <!--  <link rel="stylesheet" type="text/css" href="/css/new_style.css">-->
+    <link rel="stylesheet" type="text/css" href="/css/new_home.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -64,7 +65,7 @@
             <img th:unless="${vehicle.imageUrl!=null}" src="/images/ford.jpeg" width="100%">
             <img th:unless="${vehicle.imageUrl==null}" th:src="${vehicle.imageUrl}">
         </div>
-        <div>
+        <div class="details">
             <div class="header-font car-model-brand"
                  th:text="${#strings.capitalize(vehicle.brand.toString().toLowerCase())+' '+ vehicle.model}">Toyota
                 Corolla

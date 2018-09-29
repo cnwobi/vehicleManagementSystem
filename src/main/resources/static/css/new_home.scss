@@ -1,4 +1,4 @@
-@import "style";
+@import "new_style";
 
 
 button,.button{
@@ -19,7 +19,7 @@ button:hover,.button:hover{
 article{
   margin-top: 64px;
   margin-right: 12px;
-  margin-left: 12px;
+  margin-left: 13px;
   padding-top: 5px;
   box-sizing: border-box;
 
@@ -41,6 +41,11 @@ article{
       margin: auto;
       height: 150px;
       width: 250px;
+
+      @include laptop{
+        max-width: 100%;
+        height: auto;
+      }
     }
     div{
       div{
@@ -49,6 +54,7 @@ article{
       width: 100vw;
       text-align: center;
       margin-bottom: 10px;
+
     }
 
     .button{
@@ -89,4 +95,17 @@ div.success{
   text-align: center;
 
 }
+.car-model-brand{
+  @include laptop {
+    padding-top: 20px;
+    font-size: 40px;
+  }
+}
+.details{
+  div{
+    @include laptop{
+      margin-bottom: 20px;
+    }
+  }
 
+}

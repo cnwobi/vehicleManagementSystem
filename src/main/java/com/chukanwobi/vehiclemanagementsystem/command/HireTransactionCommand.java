@@ -7,11 +7,7 @@ public class HireTransactionCommand {
     private Long id;
 
     private Long customerId;
-
     private Long vehicleId;
-
-
-
     private int initialOdometerReading;
     private int finalOdometerReading;
 }
