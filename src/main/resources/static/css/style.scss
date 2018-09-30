@@ -8,6 +8,7 @@ $mobile:414px;
     @content
   }
 }
+
 @mixin mobile{
   @media (max-width: #{$mobile}) {
     @content
@@ -19,6 +20,14 @@ $mobile:414px;
     @content
   }
 }
+
+@mixin print{
+  @media print
+  {
+    @content
+  }
+}
+
 
 $colors: (
         primary: #DFDFDF,
@@ -59,6 +68,7 @@ body{
     height: 64px;
 
     background: linear-gradient(180deg, #f7f7f7 , #d7d7d7 );
+
     a{
       color:color(accent) ;
       text-decoration: none;

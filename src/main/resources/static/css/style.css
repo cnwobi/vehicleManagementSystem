@@ -24,6 +24,7 @@ body nav {
   width: 100vw;
   height: 64px;
   background: linear-gradient(180deg, #f7f7f7, #d7d7d7); }
+
   body nav a {
     color: #D4002A;
     text-decoration: none; }
@@ -128,88 +129,4 @@ body nav {
 .ul-div {
   display: none; }
 
-button, .button {
-  border: none;
-  width: 146px;
-  height: 38px;
-  color: white;
-  background-color: #D4002A;
-  outline: none;
-  font-family: 'Noto Serif JP', sans-serif; }
-
-button:active, .button:active {
-  transform: translateY(4px); }
-
-button:hover, .button:hover {
-  background-color: #a10020; }
-
-article {
-  margin-top: 64px;
-  margin-right: 12px;
-  margin-left: 13px;
-  padding-top: 5px;
-  box-sizing: border-box; }
-  article header {
-    text-align: center; }
-  article section {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 2px #DFDFDF solid;
-    padding-bottom: 20px; }
-    @media (min-width: 769px) {
-      article section {
-        flex-direction: row; } }
-    article section img {
-      display: block;
-      margin: auto;
-      height: 150px;
-      width: 250px; }
-      @media (min-width: 769px) {
-        article section img {
-          max-width: 100%;
-          height: auto; } }
-    article section div {
-      width: 100vw;
-      text-align: center;
-      margin-bottom: 10px; }
-      article section div div {
-        width: 100%; }
-    article section .button {
-      box-sizing: border-box;
-      text-decoration: none;
-      display: block;
-      margin: auto;
-      padding-top: 8px; }
-
-.header-font {
-  font-family: 'Noto Serif JP', sans-serif; }
-
-.car-model-brand {
-  font-weight: bolder;
-  font-size: 34px; }
-
-div.price {
-  font-weight: bolder;
-  margin-top: 16px; }
-  div.price span {
-    font-family: "Economica", sans-serif;
-    font-weight: bolder;
-    font-size: 20px; }
-
-.success {
-  color: green; }
-
-div.success {
-  width: 100%;
-  text-align: center; }
-
-@media (min-width: 769px) {
-  .car-model-brand {
-    padding-top: 20px;
-    font-size: 40px; } }
-
-@media (min-width: 769px) {
-  .details div {
-    margin-bottom: 20px; } }
-
-/*# sourceMappingURL=new_home.css.map */
+/*# sourceMappingURL=style.css.map */

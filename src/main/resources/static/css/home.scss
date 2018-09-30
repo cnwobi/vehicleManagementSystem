@@ -1,4 +1,10 @@
-@import "new_style";
+@import "style";
+
+@page  {
+
+  margin: 1cm;
+
+}
 
 
 button,.button{
@@ -45,6 +51,10 @@ article{
       @include laptop{
         max-width: 100%;
         height: auto;
+      }
+
+      @include print{
+        display: none;
       }
     }
     div{
@@ -107,5 +117,6 @@ div.success{
       margin-bottom: 20px;
     }
   }
+
 
 }

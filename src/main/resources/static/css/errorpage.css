@@ -24,6 +24,9 @@ body nav {
   width: 100vw;
   height: 64px;
   background: linear-gradient(180deg, #f7f7f7, #d7d7d7); }
+@page {
+  body nav {
+    display: none; } }
   body nav a {
     color: #D4002A;
     text-decoration: none; }
@@ -128,6 +131,8 @@ body nav {
 .ul-div {
   display: none; }
 
+@page {
+  margin: 1cm; }
 button, .button {
   border: none;
   width: 146px;
