@@ -2,10 +2,18 @@
 
 @page  {
 
-  margin: 1cm;
+
+
+  size: auto;
+  margin: 0;
+
 
 }
-
+nav {
+  @include print{
+    display: none !important;
+  }
+}
 
 button,.button{
   border: none;
@@ -32,6 +40,10 @@ article{
   header{
 
     text-align: center;
+
+    @include print{
+      display: none;
+    }
   }
   section{
     display: flex;
@@ -41,6 +53,7 @@ article{
     @include laptop{
       flex-direction: row;
     }
+
 
     img{
       display: block;
@@ -53,9 +66,7 @@ article{
         height: auto;
       }
 
-      @include print{
-        display: none;
-      }
+
     }
     div{
       div{
@@ -73,6 +84,10 @@ article{
       display: block;
       margin: auto;
       padding-top:8px ;
+@include print{
+  display: none !important;
+}
+
     }
 
   }

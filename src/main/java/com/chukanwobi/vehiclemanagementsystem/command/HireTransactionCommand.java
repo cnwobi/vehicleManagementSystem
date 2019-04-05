@@ -1,7 +1,7 @@
 package com.chukanwobi.vehiclemanagementsystem.command;
 
-import jpos.CashDrawer;
-import jpos.Scanner;
+/*import jpos.CashDrawer;
+import jpos.Scanner;*/
 import lombok.Data;
 @Data
 public class HireTransactionCommand {
@@ -13,5 +13,7 @@ public class HireTransactionCommand {
     private int initialOdometerReading;
     private int finalOdometerReading;
 
+    public static void main(String[] args) {
 
+    }
 }

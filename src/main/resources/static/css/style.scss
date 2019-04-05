@@ -28,7 +28,6 @@ $mobile:414px;
   }
 }
 
-
 $colors: (
         primary: #DFDFDF,
         primary_light: white,
@@ -56,6 +55,8 @@ body,html{
   font-family: 'Lato', sans-serif;}
 h1,h2,h3,h4,h5,h6{
   font-family: 'Noto Serif JP', sans-serif;
+
+
 }
 body{
 
@@ -68,7 +69,9 @@ body{
     height: 64px;
 
     background: linear-gradient(180deg, #f7f7f7 , #d7d7d7 );
-
+@include print{
+  display: none;
+}
     a{
       color:color(accent) ;
       text-decoration: none;

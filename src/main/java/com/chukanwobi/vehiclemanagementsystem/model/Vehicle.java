@@ -7,7 +7,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.Year;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -19,7 +21,7 @@ public class Vehicle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String regNumber;
-    private String description;
+       private String description;
     private String imageUrl;
     @Enumerated(value = EnumType.STRING)
     private Status status;
@@ -59,6 +61,15 @@ public boolean isAvailable(){
     public enum Status {HIRE,AVAILABLE,SERVICE}
     public  enum Brand{BENTLEY,MERCEDES,JAGUAR,PEUGOT,HONDA,TOYOTA,FORD}
 
+    class Tire{
+        private Integer size;
+        private  String brand;
 
+        public Tire(Integer size, String brand) {
+            this.size = size;
+            this.brand = brand;
+        }
+
+    }
 }
 

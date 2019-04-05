@@ -90,5 +90,9 @@ private CustomerRepository customerRepository;
 
         vehicle2.setImageUrl("https://s3.amazonaws.com/carhireapp/honda.jpg");
         vehicleRepository.save(vehicle2);
+
+        
     }
+
+
 }

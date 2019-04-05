@@ -24,9 +24,9 @@ body nav {
   width: 100vw;
   height: 64px;
   background: linear-gradient(180deg, #f7f7f7, #d7d7d7); }
-@page {
-  body nav {
-    display: none; } }
+  @media print {
+    body nav {
+      display: none; } }
   body nav a {
     color: #D4002A;
     text-decoration: none; }
@@ -132,7 +132,12 @@ body nav {
   display: none; }
 
 @page {
-  margin: 1cm; }
+  size: auto;
+  margin: 0; }
+@media print {
+  nav {
+    display: none !important; } }
+
 button, .button {
   border: none;
   width: 146px;
@@ -156,6 +161,9 @@ article {
   box-sizing: border-box; }
   article header {
     text-align: center; }
+    @media print {
+      article header {
+        display: none; } }
   article section {
     display: flex;
     flex-direction: column;
@@ -185,6 +193,9 @@ article {
       display: block;
       margin: auto;
       padding-top: 8px; }
+      @media print {
+        article section .button {
+          display: none !important; } }
 
 .header-font {
   font-family: 'Noto Serif JP', sans-serif; }

@@ -1,96 +1,231 @@
-/*
-Error: Undefined mixin 'norint'.
-        on line 56 of home.scss, in `norint'
-        from line 56 of home.scss
+@import url("https://fonts.googleapis.com/css?family=Economica|Special+");
+@import url("https://fonts.googleapis.com/css?family=Economica|Special+");
+.right {
+  float: right; }
 
-51:       @include laptop{
-52:         max-width: 100%;
-53:         height: auto;
-54:       }
-55: 
-56:       @include norint{
-57:         display: none;
-58:       }
-59:     }
-60:     div{
-61:       div{
+.left {
+  float: left; }
 
-Backtrace:
-home.scss:56:in `norint'
-home.scss:56
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/plugin.rb:82:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/exec/sass_scss.rb:338:in `watch_or_update'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/exec/base.rb:50:in `parse'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/lib/sass/exec/base.rb:18:in `parse!'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.7/bin/scss:13:in `<top (required)>'
-C:/Ruby24-x64/bin/scss:23:in `load'
-C:/Ruby24-x64/bin/scss:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'norint'.\A         on line 56 of home.scss, in `norint'\A         from line 56 of home.scss\A \A 51:       @include laptop{\A 52:         max-width: 100%;\A 53:         height: auto;\A 54:       }\A 55: \A 56:       @include norint{\A 57:         display: none;\A 58:       }\A 59:     }\A 60:     div{\A 61:       div{"; }
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif JP', sans-serif; }
+
+body nav {
+  display: block;
+  position: fixed;
+  top: 0px;
+  margin: 0;
+  width: 100vw;
+  height: 64px;
+  background: linear-gradient(180deg, #f7f7f7, #d7d7d7); }
+  @media print {
+    body nav {
+      display: none; } }
+  body nav a {
+    color: #D4002A;
+    text-decoration: none; }
+  body nav ul.ul-nav1 {
+    list-style: none;
+    width: 100vw;
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    position: absolute; }
+    body nav ul.ul-nav1 li.brand {
+      font-family: 'Work Sans', sans-serif;
+      padding-left: 10px;
+      color: #D4002A;
+      font-weight: 900;
+      font-size: 29px; }
+    body nav ul.ul-nav1 li.menu {
+      padding-right: 20px; }
+  body nav ul.ul-nav2 {
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30vw;
+    margin-top: 64px;
+    width: 70vw;
+    border: none;
+    height: 80vh;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #f9f9f9; }
+    body nav ul.ul-nav2 li {
+      margin-top: 10%; }
+      body nav ul.ul-nav2 li a {
+        color: black; }
+
+.ul-div {
+  display: none; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif JP', sans-serif; }
+
+body nav {
+  display: block;
+  position: fixed;
+  top: 0px;
+  margin: 0;
+  width: 100vw;
+  height: 64px;
+  background: linear-gradient(180deg, #f7f7f7, #d7d7d7); }
+  body nav a {
+    color: #D4002A;
+    text-decoration: none; }
+  body nav ul.ul-nav1 {
+    list-style: none;
+    width: 100vw;
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    position: absolute; }
+    body nav ul.ul-nav1 li.brand {
+      font-family: 'Work Sans', sans-serif;
+      padding-left: 10px;
+      color: #D4002A;
+      font-weight: 900;
+      font-size: 29px; }
+    body nav ul.ul-nav1 li.menu {
+      padding-right: 20px; }
+  body nav ul.ul-nav2 {
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30vw;
+    margin-top: 64px;
+    width: 70vw;
+    border: none;
+    height: 80vh;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #f9f9f9; }
+    body nav ul.ul-nav2 li {
+      margin-top: 10%; }
+      body nav ul.ul-nav2 li a {
+        color: black; }
+
+.ul-div {
+  display: none; }
+
+@page {
+  size: auto;
+  margin: 0; }
+@media print {
+  nav {
+    display: none !important; } }
+
+button, .button {
+  border: none;
+  width: 146px;
+  height: 38px;
+  color: white;
+  background-color: #D4002A;
+  outline: none;
+  font-family: 'Noto Serif JP', sans-serif; }
+
+button:active, .button:active {
+  transform: translateY(4px); }
+
+button:hover, .button:hover {
+  background-color: #a10020; }
+
+article {
+  margin-top: 64px;
+  margin-right: 12px;
+  margin-left: 13px;
+  padding-top: 5px;
+  box-sizing: border-box; }
+  article header {
+    text-align: center; }
+    @media print {
+      article header {
+        display: none; } }
+  article section {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px #DFDFDF solid;
+    padding-bottom: 20px; }
+    @media (min-width: 769px) {
+      article section {
+        flex-direction: row; } }
+    article section img {
+      display: block;
+      margin: auto;
+      height: 150px;
+      width: 250px; }
+      @media (min-width: 769px) {
+        article section img {
+          max-width: 100%;
+          height: auto; } }
+    article section div {
+      width: 100vw;
+      text-align: center;
+      margin-bottom: 10px; }
+      article section div div {
+        width: 100%; }
+    article section .button {
+      box-sizing: border-box;
+      text-decoration: none;
+      display: block;
+      margin: auto;
+      padding-top: 8px; }
+      @media print {
+        article section .button {
+          display: none !important; } }
+
+.header-font {
+  font-family: 'Noto Serif JP', sans-serif; }
+
+.car-model-brand {
+  font-weight: bolder;
+  font-size: 34px; }
+
+div.price {
+  font-weight: bolder;
+  margin-top: 16px; }
+  div.price span {
+    font-family: "Economica", sans-serif;
+    font-weight: bolder;
+    font-size: 20px; }
+
+.success {
+  color: green; }
+
+div.success {
+  width: 100%;
+  text-align: center; }
+
+@media (min-width: 769px) {
+  .car-model-brand {
+    padding-top: 20px;
+    font-size: 40px; } }
+
+@media (min-width: 769px) {
+  .details div {
+    margin-bottom: 20px; } }
+
+/*# sourceMappingURL=home.css.map */
